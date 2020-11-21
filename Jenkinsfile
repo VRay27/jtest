@@ -3,16 +3,16 @@ pipeline {
   stages {
     stage('build') {
       parallel {
-        stage('build') {
+        stage('Build 1') {
           steps {
             echo 'This is a building stage'
           }
         }
 
-        stage('buil2') {
+        stage('Build 2') {
           steps {
             echo 'Build 2 new message from the blue ocean editor'
-            sh 'echo whoami'
+            sh 'whoami'
           }
         }
 
@@ -21,7 +21,7 @@ pipeline {
 
     stage('test') {
       parallel {
-        stage('test') {
+        stage('Testing 1') {
           steps {
             echo 'This is a testing stage'
             sh 'whoami'
