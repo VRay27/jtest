@@ -30,7 +30,6 @@ pipeline {
 
         stage('Testing 2') {
           steps {
-            build 'Test2'
             sh 'echo "Testing started"'
             echo 'test completed'
           }
