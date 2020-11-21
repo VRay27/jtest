@@ -19,7 +19,7 @@ pipeline {
       }
     }
 
-    stage('test') {
+    stage('Testing 1') {
       parallel {
         stage('Testing 1') {
           steps {
@@ -28,10 +28,10 @@ pipeline {
           }
         }
 
-        stage('Testing 2') {
+        stage('Testing2') {
           steps {
-            sh 'echo "Testing started"'
-            echo 'test completed'
+            sh 'whoami'
+            echo 'Hello from test2 '
           }
         }
 
