@@ -24,6 +24,7 @@ pipeline {
         stage('test') {
           steps {
             echo 'This is a testing stage'
+            sh 'whoami'
           }
         }
 
