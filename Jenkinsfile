@@ -1,44 +1,21 @@
 pipeline {
   agent any
   stages {
-    stage('build') {
-      parallel {
-        stage('Build 1') {
-          steps {
-            echo 'This is a building stage'
-          }
-        }
-
-        stage('Build 2') {
-          steps {
-            echo 'Build 2 new message from the blue ocean editor'
-            sh 'whoami'
-          }
-        }
-
+    stage('New Branch Build') {
+      steps {
+        echo 'New branch build step'
+        sh 'whoami'
       }
     }
 
-    stage('Testing 1') {
-      parallel {
-        stage('Testing 1') {
-          steps {
-            echo 'This is a testing stage'
-            sh 'whoami'
-          }
-        }
-
-        stage('Testing2') {
-          steps {
-            sh 'whoami'
-            echo 'Hello from test2 '
-          }
-        }
-
+    stage('New Branch Testing ') {
+      steps {
+        echo 'This is a testing stage'
+        sh 'whoami'
       }
     }
 
-    stage('deploy') {
+    stage('New Branch Deploy') {
       steps {
         echo 'This is a depolying stage'
       }
